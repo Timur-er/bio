@@ -1,4 +1,50 @@
 .title {
-  font-family: SansSerif, serif;
+  font-family: Ubuntu, serif;
   font-size: 45px;
+  color: white;
+}
+
+.mainPage {
+}
+.greeting {
+  background-color: #25282b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  height: 100vh;
+}
+
+.menuBar {
+
+}
+
+.questionInput {
+  //width: 30%;
+  height: 5%;
+  font-size: 200%;
+  font-family: Ubuntu, serif;
+  outline: none;
+}
+
+.questionWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+}
+
+.questionBlock {
+  display: flex;
+}
+
+.questionBack {
+  position: absolute;
+  display: flex;
+  font-size: 300px;
+  font-family: Ubuntu, serif;
+  z-index: -1;
+  color: #4c4c4d;
+  filter: blur(10px);
 }

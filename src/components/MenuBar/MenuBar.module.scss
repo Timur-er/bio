@@ -1,15 +1,16 @@
 .header {
+  //width: 50%;
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
 }
 
 .background {
-  background-color: grey;
+  background-color: #25282b;
 }
 
 .link {
   text-decoration: none;
   color: white;
-  font-family: SansSerif, serif;
+  font-family: Ubuntu, serif;
 }

@@ -1,0 +1,16 @@
+.questionsBlock {
+  //width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-family: Ubuntu, serif;
+  font-size: 30px;
+  margin: 30px 0;
+  color: white;
+}
+
+.questionsPage {
+  background-color: #25282b;
+}
