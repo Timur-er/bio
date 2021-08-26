@@ -1,0 +1,23 @@
+.messageWrapper {
+  margin: 10px 0;
+  display: flex;
+  font-family: Ubuntu, serif;
+  vertical-align: center;
+  align-items: center;
+}
+
+.userIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #ff6d6d;
+}
+
+.userName {
+  font-size: 14px;
+  color: #4c4c4d;
+}
+
+.messageSection {
+    margin-left: 10px;
+}

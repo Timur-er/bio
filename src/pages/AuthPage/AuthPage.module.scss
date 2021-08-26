@@ -1,0 +1,65 @@
+.authPage {
+  background-color: #363645;
+  height: 100vh;
+  width: 100%;
+  font-family: Ubuntu, serif;
+}
+
+.authWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  //flex-direction: column;
+  padding-top: 150px;
+ }
+
+.auth {
+  width: 40%;
+  //background-color: #ff6d6d;
+  //justify-content: space-between;
+  border-radius: 5px;
+  //padding: 30px 30px 20px 30px;
+  font-family: Ubuntu, serif;
+  box-shadow: 0 0 40px 10px #ff6d6d;
+}
+
+.authWayButtons {
+  display: flex;
+  //justify-content: space-between;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  //margin-left: 0;
+  //padding-left: 0;
+  //margin-top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.authWay {
+  color: white;
+  font-size: 30px;
+  background-color: inherit;
+  border: none;
+  width: 50%;
+  padding: 20px 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.form {
+  padding: 0 20px;
+}
+
+.activeAuthWay {
+  background-color: #ff6d6d;
+}
+
+.activeAuthForm {
+  background-color: #ff6d6d;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+}

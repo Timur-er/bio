@@ -7,7 +7,7 @@
 .mainPage {
 }
 .greeting {
-  background-color: #25282b;
+  background-color: #363645;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,6 +45,6 @@
   font-size: 300px;
   font-family: Ubuntu, serif;
   z-index: -1;
-  color: #4c4c4d;
+  color: white;
   filter: blur(10px);
 }

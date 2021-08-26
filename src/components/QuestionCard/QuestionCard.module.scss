@@ -1,11 +1,11 @@
 .cardWrapper {
   width: 40%;
   height: 100px;
-  //border: 1px solid #4c4c4d;
-  border-bottom: 1px solid #4c4c4d;
+  border: 1px solid #4c4c4d;
+  //border-bottom: 1px solid #4c4c4d;
   padding:  0 20px;
   font-family: Ubuntu, serif;
-  //border-radius: 5px;
+  border-radius: 5px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -17,8 +17,19 @@
   color: white;
 }
 
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .buttonBlock {
   display: flex;
   justify-content: space-between;
   width: 80%;
+}
+
+.name {
+  font-size: 12px;
+  color: gray;
 }
