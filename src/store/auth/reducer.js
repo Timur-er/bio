@@ -1,6 +1,6 @@
-
 const snoop = () => {};
 const initialState = {
+    userName: null,
     userId: null,
     token: null,
     login: snoop,
@@ -10,8 +10,10 @@ const initialState = {
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'login':
-            return {...action.payload}
+        case 'loginFunctions':
+            return {...state, ...action.payload}
+        case 'auth':
+            return {...state, ...action.payload}
         default:
             return state
     }

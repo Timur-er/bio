@@ -1,1 +1,2 @@
-export const loginAction = (userId, token, login, logout, isAuth) => ({type: 'login', payload: {userId, token, login, logout, isAuth}})
+export const authFunctionsAction = (login, logout) => ({type: 'loginFunctions', payload: { login: login, logout:logout }})
+export const authAction = (userName, token, userId, isAuth) => ({type: 'auth', payload: {userName, userId, token, isAuth}});

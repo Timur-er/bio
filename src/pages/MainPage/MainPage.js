@@ -4,6 +4,7 @@ import MenuBar from "../../components/MenuBar/MenuBar";
 import {Zoom, Flip} from "react-reveal";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import Button from "../../components/Button/Button";
+import QuestionInput from "../../components/QuestionInput/QuestionInput";
 
 const MainPage = () => {
     return (
@@ -13,8 +14,7 @@ const MainPage = () => {
                         <div className={styles.questionWrapper}>
                             <span className={styles.questionBack}>Ask me</span>
                             <div className={styles.questionBlock}>
-                                <input className={styles.questionInput} type="text"/>
-                                <Button variant={'default'}>search</Button>
+                                <QuestionInput />
                             </div>
                         </div>
                 </Flip>

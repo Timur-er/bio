@@ -1,0 +1,52 @@
+.title {
+  color: black;
+  font-size: 34px;
+}
+
+.background {
+  background-color: #363645;
+  height: 100vh;
+  color: white;
+  font-family: Ubuntu, serif;
+  padding-top: 50px;
+}
+
+.userImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: #ff6d6d;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 15px;
+}
+
+.infoWrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+.infoTitle {
+  color: lightgray;
+}
+
+.userPage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeChatsWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chats {
+  width: 100%;
+  margin-top: 20px;
+}

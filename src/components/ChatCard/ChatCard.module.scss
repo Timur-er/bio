@@ -1,0 +1,20 @@
+.chat {
+  width: 100%;
+  border: 1px solid #ff6d6d;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  transition: 0.2s ease all;
+
+  &:hover {
+    transform: scale(1.1) translateX(-5%);
+    cursor: pointer;
+  }
+}
+
+.userName {
+  font-size: 14px;
+  color: gray;
+}

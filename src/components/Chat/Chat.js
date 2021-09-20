@@ -1,22 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Messages from "../Messages/Messages";
 import styles from './Chat.module.scss';
 
+
 const Chat = () => {
+
+    useEffect(() => {
+
+    }, [])
+
     return (
         <div className={styles.chatWrapper}>
-            <div className={styles.chatAndInfoSection}>
 
-                <div className={styles.messagesWrapper}>
-                    <Messages/>
-                </div>
-
-                <div>
-                    here will be questions cards later
-                </div>
-
+            <div className={styles.messagesWrapper}>
+                <Messages/>
             </div>
-
 
             <div className={styles.inputWrapper}>
                 <input type="text" className={styles.input}/>

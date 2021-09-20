@@ -5,6 +5,7 @@ import * as yup from 'yup';
 import {useHttp} from "../../Hooks/http.hook";
 import {useDispatch, useSelector} from "react-redux";
 import {getLogin} from "../../store/auth/selectors";
+import {useHistory} from "react-router-dom";
 
 const validationSchema = yup.object().shape({
     email: yup
@@ -20,6 +21,8 @@ const LoginForm = () => {
 
     const {error, request} = useHttp();
     const login = useSelector(getLogin)
+    const history = useHistory();
+
     return (
         <Formik
             initialValues={{
@@ -34,9 +37,10 @@ const LoginForm = () => {
                     try {
                         const data = await request('https://askme-server.herokuapp.com/api/auth/login', 'POST', {email, password})
                         console.log(data);
-
-                        console.log(login);
-                        login(data.token, data.userId)
+                        // i am receive user name that i need put to redux store
+                        console.log('user name - ' + data.userName);
+                        login(data.userName, data.userId, data.token)
+                        history.push('/userInfo')
                     } catch (e) {}
                 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import {Switch, Route, useLocation} from 'react-router-dom';
-import {MAIN_PAGE_ROUTE, QUESTIONS_PAGE_ROUTE, CHAT_PAGE_ROUTE, AUTH_PAGE_ROUTE} from "./const";
+import {Switch, Route, useLocation, Redirect} from 'react-router-dom';
+import {MAIN_PAGE_ROUTE, QUESTIONS_PAGE_ROUTE, CHAT_PAGE_ROUTE, AUTH_PAGE_ROUTE, USER_INFO_ROUTE} from "./const";
 import MainPage from "../pages/MainPage/MainPage";
 import QuestionsPage from "../pages/QuestionsPage/QuestionsPage";
 import MenuBar from "../components/MenuBar/MenuBar";
@@ -9,9 +9,10 @@ import AuthPage from "../pages/AuthPage/AuthPage";
 import {animated, useTransition} from "react-spring";
 import styles from './PageAnimatiob.module.scss';
 import Popup from "../components/Popup/Popup";
+import UserPage from "../pages/UserPage/UserPage";
 
 
-const PagesRoute = () => {
+const AppRoutes = () => {
 
     const location = useLocation();
     const transitions = useTransition(location,  {
@@ -20,9 +21,13 @@ const PagesRoute = () => {
         leave: {transform: `translateX(-100%)`}
     })
 
+    const isAuth = false;
+
+
+
     return (
         <>
-        <MenuBar/>
+            <MenuBar/>
             <Popup />
             <main className={styles.wrapper}>
                 {transitions((props, item) => (
@@ -33,6 +38,7 @@ const PagesRoute = () => {
                                 <Route component={QuestionsPage} exact path={QUESTIONS_PAGE_ROUTE}/>
                                 <Route component={ChatPage} exact path={CHAT_PAGE_ROUTE}/>
                                 <Route component={AuthPage} exact path={AUTH_PAGE_ROUTE}/>
+                                <Route component={UserPage} exact path={USER_INFO_ROUTE}/>
                             </Switch>
                         </div>
                     </animated.div>
@@ -42,4 +48,4 @@ const PagesRoute = () => {
     )
 };
 
-export default PagesRoute;
+export default AppRoutes;
