@@ -23,7 +23,7 @@ export const useHttp = () => {
             if (!response.ok) {
                 throw new Error(data.message || 'Smth went wrong')
             }
-            setLoading('false');
+            setLoading(false);
             return data
         } catch (e) {
             setLoading(false)

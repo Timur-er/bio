@@ -6,6 +6,14 @@
   align-items: center;
 }
 
+.msgJustifyEnd {
+  justify-content: flex-end;
+}
+
+.msgJustifyStart {
+  justify-content: flex-start;
+}
+
 .userIcon {
   width: 25px;
   height: 25px;

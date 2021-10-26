@@ -7,13 +7,11 @@ import {CHAT_PAGE_ROUTE} from "../../routes/const";
 import {getUserName} from "../../store/auth/selectors";
 import {useSelector} from "react-redux";
 
-const QuestionCard = () => {
-
+const QuestionCard = ({ askUser, question }) => {
     const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
     const [height, setHeight] = useState('0px')
     const content = useRef(null);
     const userName = useSelector(getUserName);
-    const withChat = 'hansus';
 
     const openChat = () => {
         console.log('open chat')
@@ -27,8 +25,8 @@ const QuestionCard = () => {
     return (
         <div className={styles.cardWrapper}>
             <div className={styles.textSection}>
-                <span className={styles.question}>Here will be a question later</span>
-                <span className={styles.name}> Timur Erkimbaev</span>
+                <span className={styles.question}>{question}</span>
+                <span className={styles.name}>{askUser}</span>
             </div>
 
             <div ref={content} style={{height: `${height}`}} className={styles.description}>
@@ -36,7 +34,7 @@ const QuestionCard = () => {
             </div>
 
             <div className={styles.buttonBlock}>
-                <NavLink to={`${CHAT_PAGE_ROUTE}?userName=${userName}&withUser=${withChat}`}>
+                <NavLink to={`${CHAT_PAGE_ROUTE}?userName=${userName}&askUser=${askUser}`}>
                     <Button onClick={openChat} variant={'answer'}>Answer</Button>
                 </NavLink>
                 <Button variant={'toTop'}>Vote to top</Button>

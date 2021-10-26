@@ -3,7 +3,6 @@ import {useAuth} from "./Hooks/auth.hook";
 import {useEffect} from "react";
 import AppRoutes from "./routes/AppRoutes";
 import {authFunctionsAction} from "./store/auth/actions";
-import ModalWindow from "./components/ModalWindow/ModalWindow";
 
 function App() {
 
@@ -16,7 +15,6 @@ function App() {
 
   return (
       <>
-        {/*<ModalWindow/>*/}
         <AppRoutes />
       </>
   );

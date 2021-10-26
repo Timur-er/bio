@@ -5,31 +5,10 @@ import Chat from "../../components/Chat/Chat";
 import queryString from "query-string";
 import io from 'socket.io-client';
 
-let socket = null;
 
-const ChatPage = ({location}) => {
+const ChatPage = () => {
 
-    const [chatWithUser, setChatWithUser] = useState(null);
-    const [chatFromUser, setFromUser] = useState(null);
-    // const ENDPOINT = 'https://askme-server.herokuapp.com/';
-    const ENDPOINT = 'http://localhost:5000';
-
-    useEffect(() => {
-        const { userName, withUser } = queryString.parse(location.search);
-        setChatWithUser(withUser);
-        setFromUser(chatFromUser);
-        socket = io(ENDPOINT);
-
-        socket.emit('join', {userName, withUser}, () => {
-
-        })
-
-        // when the component will unmount
-        return () => {
-            socket.emit('disconnect');
-            socket.off();
-        }
-    }, [ENDPOINT, chatFromUser, location.search])
+    const chatWithUser = 'hansus';
 
     return (
         <div className={styles.chatPage}>

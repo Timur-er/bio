@@ -2,8 +2,11 @@ import React from 'react';
 import Container from "../../components/Container/Container";
 import styles from './UserPage.module.scss';
 import ChatCard from "../../components/ChatCard/ChatCard";
+import {useSelector} from "react-redux";
+import {getUserName} from "../../store/auth/selectors";
 
 const UserPage = () => {
+    const userName = useSelector(getUserName);
     return (
         <div className={styles.background}>
             <Container>
@@ -15,7 +18,7 @@ const UserPage = () => {
                         <div className={styles.userInfo}>
                             <div className={styles.infoWrapper}>
                                 <span className={styles.infoTitle}>User name:</span>
-                                <span>etimur</span>
+                                <span>{userName}</span>
                             </div>
 
                             <div className={styles.infoWrapper}>
